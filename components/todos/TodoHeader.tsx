@@ -1,15 +1,13 @@
-import { Heading } from 'components/text/Heading'
-import { Text } from 'components/text/Text'
-import { View } from 'react-native'
-import * as React from 'react'
-import { tw } from 'tailwind'
-import { Badge } from 'components/Badge'
+import { Heading } from '../text/Heading'
 import { todoStore } from './todo-store'
+import { Text } from '../text/Text'
+import { tw } from '../../tailwind'
+import { View } from 'react-native'
+import { Badge } from '../Badge'
+import * as React from 'react'
 
 export const TodoHeader: React.VFC = () => {
 	const todoCount = todoStore((s) => s.todoCount)
-
-	console.log({ todoCount })
 
 	return (
 		<>

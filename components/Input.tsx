@@ -1,9 +1,9 @@
 import { TextInput } from 'react-native'
 import { inter400 } from './text/Text'
+import { tw } from '../tailwind'
 import * as React from 'react'
-import { tw } from 'tailwind'
 
-export const Input = () => {
+export const Input: React.VFC = () => {
 	const [text, setText] = React.useState('')
 
 	return (

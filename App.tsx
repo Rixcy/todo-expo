@@ -1,3 +1,9 @@
+import AppLoading from 'expo-app-loading'
+import { SafeAreaView } from 'react-native'
+import { Todo } from './screens/todo'
+import { tw } from './tailwind'
+import React from 'react'
+
 import {
 	useFonts,
 	Inter_900Black,
@@ -5,11 +11,6 @@ import {
 	Inter_700Bold,
 	Inter_400Regular,
 } from '@expo-google-fonts/inter'
-import AppLoading from 'expo-app-loading'
-import React from 'react'
-import { SafeAreaView } from 'react-native'
-import { tw } from 'tailwind'
-import { Todo } from './screens/todo'
 
 export default function App() {
 	let [fontsLoaded] = useFonts({

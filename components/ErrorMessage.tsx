@@ -1,6 +1,6 @@
 import { Text } from './text/Text'
+import { tw } from '../tailwind'
 import * as React from 'react'
-import { tw } from 'tailwind'
 
 export type ErrorMessageProps = {
 	children: React.ReactNode

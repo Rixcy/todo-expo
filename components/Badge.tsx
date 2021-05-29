@@ -1,7 +1,7 @@
 import { View } from 'react-native'
 import { Text } from './text/Text'
+import { tw } from '../tailwind'
 import * as React from 'react'
-import { tw } from 'tailwind'
 
 type BadgeProps = {
 	count: number

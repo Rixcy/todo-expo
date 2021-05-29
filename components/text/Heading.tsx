@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Text, TextProps } from 'react-native'
-import { tw } from 'tailwind'
+import { tw } from '../../tailwind'
 import { inter400, inter700, inter800, inter900 } from './Text'
 
 type HeadingSize = 'h1' | 'h2' | 'h3' | 'h4'

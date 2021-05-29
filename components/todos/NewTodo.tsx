@@ -1,34 +1,10 @@
-import React, { useState } from 'react'
 import { Text, View, TextInput, TouchableHighlight } from 'react-native'
 import { useForm, Controller } from 'react-hook-form'
+import { todoStore } from './todo-store'
+import React, { useState } from 'react'
 import { tw } from 'tailwind'
 import clsx from 'clsx'
-import create from 'zustand'
-
-type Todo = { id: number; content: string }
-
-type todoStoreProps = {
-	todos: Todo[]
-	addTodo: (content: Todo['content']) => void
-	clearTodo: (todoId: Todo['id']) => void
-	getId: () => number
-}
-
-export const todoStore = create<todoStoreProps>((set, get) => ({
-	todos: [],
-	addTodo: (content) => {
-		set({ todos: [{ id: get().getId(), content }, ...get().todos] })
-	},
-	clearTodo: (todoId) => {
-		const todos = get().todos
-		const filteredTodos = todos.filter((todo) => todo.id !== todoId)
-		set({ todos: filteredTodos })
-	},
-	getId: () => {
-		const id = get().todos.length + 1
-		return id
-	},
-}))
+import { ErrorMessage } from 'components/ErrorMessage'
 
 export default function NewTodo() {
 	const {
@@ -98,7 +74,7 @@ export default function NewTodo() {
 					<Text style={tw('text-xl text-nord4')}>+</Text>
 				</TouchableHighlight>
 			</View>
-			{errors.todo && <Text style={tw('mt-2 text-nord15')}>This is required.</Text>}
+			<ErrorMessage show={!!errors.todo}>This is required.</ErrorMessage>
 		</View>
 	)
 }

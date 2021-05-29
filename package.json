@@ -9,6 +9,7 @@
 		"tw:create": "npx create-tailwind-rn"
 	},
 	"dependencies": {
+		"@react-native-async-storage/async-storage": "^1.13.0",
 		"@tailwindcss/forms": "^0.3.2",
 		"clsx": "^1.1.1",
 		"expo": "~41.0.1",

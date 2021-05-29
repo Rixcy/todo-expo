@@ -1,8 +1,9 @@
-import { FlatList, Keyboard, Text, TouchableHighlight, View } from 'react-native'
+import { FlatList, Keyboard, TouchableHighlight, View } from 'react-native'
 import { todoStore } from './todo-store'
 import * as React from 'react'
 import { tw } from 'tailwind'
 import clsx from 'clsx'
+import { Text } from 'components/text/Text'
 
 export const TodoList: React.VFC = () => {
 	const todos = todoStore((s) => s.todos)

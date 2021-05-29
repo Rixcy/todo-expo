@@ -1,10 +1,11 @@
-import { Text, View, TextInput, TouchableHighlight } from 'react-native'
+import { View, TextInput, TouchableHighlight } from 'react-native'
 import { useForm, Controller } from 'react-hook-form'
 import { todoStore } from './todo-store'
 import React, { useState } from 'react'
 import { tw } from 'tailwind'
 import clsx from 'clsx'
 import { ErrorMessage } from 'components/ErrorMessage'
+import { Text } from 'components/text/Text'
 
 export default function NewTodo() {
 	const {

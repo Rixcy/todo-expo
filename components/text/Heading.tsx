@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Text, TextProps } from 'react-native'
 import { tw } from 'tailwind'
+import { inter400, inter700, inter800, inter900 } from './Text'
 
 type HeadingSize = 'h1' | 'h2' | 'h3' | 'h4'
 
@@ -12,24 +13,21 @@ type HeadingProps = TextProps & {
 export const Heading: React.VFC<HeadingProps> = (props) => {
 	const { size = 'h1', children, style, ...restProps } = props
 
-	let internalStyle = {
-		fontFamily: 'Inter_900Black',
-	}
-
+	let internalStyle = inter900
 	let twClasses = 'text-3xl mb-4'
 
 	if (size === 'h2') {
-		internalStyle.fontFamily = 'Inter_800ExtraBold'
+		internalStyle = inter800
 		twClasses = 'text-2xl mb-3'
 	}
 
 	if (size === 'h3') {
-		internalStyle.fontFamily = 'Inter_700Bold'
+		internalStyle = inter700
 		twClasses = 'text-xl mb-2'
 	}
 
 	if (size === 'h4') {
-		internalStyle.fontFamily = 'Inter_400Regular'
+		internalStyle = inter400
 		twClasses = 'text-lg mb-1'
 	}
 

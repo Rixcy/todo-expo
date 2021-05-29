@@ -9,6 +9,7 @@ type todoStoreProps = {
 	addTodo: (content: Todo['content']) => void
 	clearTodo: (todoId: Todo['id']) => void
 	getId: () => number
+	todoCount: () => number
 }
 
 export const todoStore = create<todoStoreProps>(
@@ -27,6 +28,7 @@ export const todoStore = create<todoStoreProps>(
 				const id = get().todos.length + 1
 				return id
 			},
+			todoCount: () => get().todos.length,
 		}),
 		{ name: 'todos', getStorage: () => AsyncStorage, whitelist: ['todos'] }
 	)

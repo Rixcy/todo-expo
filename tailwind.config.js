@@ -22,6 +22,9 @@ module.exports = {
 				nord15: '#B48EAD',
 			},
 		},
+		fontFamily: {
+			sans: ['Inter', 'sans-serif'],
+		},
 	},
 	variants: {
 		extend: {},

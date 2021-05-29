@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "todo-expo",
+    "description": "Built using TailwindCSS",
     "slug": "todo-expo",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,7 +9,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#3B4252"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -28,7 +29,6 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "description": ""
+    }
   }
 }
